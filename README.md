@@ -12,7 +12,7 @@
 - PHP version >= 7.3
 - Composer
 - bitwasp/bitcoin
-- Extension PHP **GD**
+- Extension PHP **gmp**
 
 ### Ejemplo de uso
 
