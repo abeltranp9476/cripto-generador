@@ -1,5 +1,32 @@
 {
-    "require": {
-        "bitwasp/bitcoin": "^1.0"
-    }
+	"name": "abeltranp9476/cripto-generador",
+	"description": "Librería PHP para generar direcciones de criptomonedas",
+	"keywords": [
+		"php",
+		"library"
+	],
+	"type": "library",
+	"homepage": "https://github.com/abeltranp9476/cripto-generador",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Ariel Beltrán",
+			"email": "abeltran.9476@gmail.com",
+			"homepage": "https://abeltranp94.is-a.dev/"
+		}
+	],
+	"require": {
+		"php": ">=7.3",
+		"bitwasp/bitcoin": "^1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"CriptoGenerador\\": "lib"
+		}
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
