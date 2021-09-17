@@ -44,9 +44,6 @@ class HD
 
     public function address_from_master_pub($path = '0/0')
     {
-
-
-
         $adapter = Bitcoin::getEcAdapter();
         $slip132 = new Slip132(new KeyToScriptHelper($adapter));
 
