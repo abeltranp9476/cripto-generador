@@ -1,5 +1,7 @@
 ### Criptomonedas soportadas
 
+Soporte para 3 tipos de direcciones: **legacy**, **compatibility** y **segwit**.
+
 - Bitcoin
 - Dash
 - Dogecoin
@@ -30,6 +32,7 @@ use CriptoGenerador\HD;
 
 $criptoGen = new HD(); /* Crear nueva instancia de la clase HD */
 $criptoGen->set_network('bitcoin');
+/* Si tu wallet es compatible con segwit utiliza set_zpub */
 $criptoGen->set_xpub('Tu xpub de Bitcoin'); /* Escriba la clave maestra de su wallet Bitcoin */
 echo $criptoGen->address_from_master_pub('0/0'); /* Genera la primera direccion BTC para depositos */
 
