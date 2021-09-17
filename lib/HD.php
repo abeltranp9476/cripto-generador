@@ -49,7 +49,6 @@ class HD
 
         $adapter = Bitcoin::getEcAdapter();
         $slip132 = new Slip132(new KeyToScriptHelper($adapter));
-        $addrCreator = new AddressCreator();
 
         // We're using bitcoin, and need the slip132 bitcoin registry
         $network= $this->network;
