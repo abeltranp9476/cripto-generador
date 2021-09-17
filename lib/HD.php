@@ -44,6 +44,10 @@ class HD
 
     public function address_from_master_pub($path = '0/0')
     {
+        if (empty($this->network)) {
+            throw new \Exception("Network is not present!");
+        }
+
         $adapter = Bitcoin::getEcAdapter();
         $slip132 = new Slip132(new KeyToScriptHelper($adapter));
 
@@ -65,6 +69,10 @@ class HD
         if(!empty($this->zpub)){
             $pub= $this->zpub;
             $pubPrefix = $slip132->p2wpkh($bitcoinPrefixes);
+        }
+
+        if (empty($pub)) {
+            throw new \Exception("XPUB, YPUB or ZPUB key is not present!");
         }
 
         // Keys with ALL of these prefixes will be supported.
