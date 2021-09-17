@@ -38,4 +38,4 @@ $criptoGen->set_xpub('Tu xpub de Bitcoin'); /* Escriba la clave maestra de su wa
 echo $criptoGen->address_from_master_pub('0/0'); /* Genera la primera direccion BTC para depositos */
 
 ```
-En los demas casos, asegurese de colocar la xpub de la wallet de la criptomoneda especificada en **set_network**. Para escoger otros Networks, guiese por la lista de criptos soportadas.
+En los demas casos, asegurese de colocar la xpub, ypub o zpub de la wallet de la criptomoneda especificada en **set_network**. Para escoger otros Networks, guiese por la lista de criptos soportadas.
