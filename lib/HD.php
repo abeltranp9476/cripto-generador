@@ -26,21 +26,13 @@ class HD
         $this->network = $network;
     }
 
-    public function set_xpub($xpub)
-    {
-        $this->xpub = $xpub;
+    public function set_pub($pub)
+    {   
+        $type= $this->getPublicMasterKeyType($pub);
+        $this->$type= $pub;
     }
 
-    public function set_ypub($ypub)
-    {
-        $this->ypub = $ypub;
-    }
-
-    public function set_zpub($zpub)
-    {
-        $this->zpub = $zpub;
-    }
-
+    
 
     public function address_from_master_pub($path = '0/0')
     {
@@ -94,4 +86,9 @@ class HD
         return $child_key->getAddress(new AddressCreator())->getAddress($btc);
     }
 
+
+    private function getPublicMasterKeyType($key)
+    {
+        return substr($key, 0, 4);
+    }
 }
