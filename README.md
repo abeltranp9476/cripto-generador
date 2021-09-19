@@ -39,10 +39,8 @@ $criptoGen->set_network('bitcoin');
     echo $ex->getMessage();
 }
 
-/* Si tu wallet es compatible con segwit utiliza set_zpub */
-/* Si tu wallet es compatible con compatibility utiliza set_ypub */
 try {
-$criptoGen->set_xpub('Tu xpub de Bitcoin'); /* Escriba la clave maestra de su wallet Bitcoin */
+$criptoGen->set_pub('Tu Master Public Key'); /* Escriba la clave maestra publica de su wallet Bitcoin */
 } catch(\Exception $ex) {
     echo $ex->getMessage();
 }
@@ -54,4 +52,4 @@ echo $criptoGen->address_from_master_pub('0/0'); /* Genera la primera direccion 
 }
 
 ```
-En los demas casos, asegurese de colocar la xpub, ypub o zpub de la wallet de la criptomoneda especificada en **set_network**. Para escoger otros Networks, guiese por la lista de criptos soportadas.
+En los demas casos, asegurese de colocar la xpub, ypub o zpub de la wallet de la criptomoneda especificada anteriormente en **set_network**. Para escoger otros Networks, guiese por la lista de criptos soportadas.
