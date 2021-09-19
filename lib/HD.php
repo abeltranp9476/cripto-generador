@@ -30,9 +30,7 @@ class HD
     {   
         $type= $this->getPublicMasterKeyType($pub);
         $this->$type= $pub;
-    }
-
-    
+    }    
 
     public function address_from_master_pub($path = '0/0')
     {
